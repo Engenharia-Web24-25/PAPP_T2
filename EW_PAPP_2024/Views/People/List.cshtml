@@ -6,9 +6,6 @@
 
 <h1>List</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -30,7 +27,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-            <td></td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-dark">Edit</a>
+            </td>
         </tr>
 }
     </tbody>
